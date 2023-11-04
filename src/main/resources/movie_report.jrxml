@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MovieMemo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1064bd39-ae51-4a82-8f7b-be5851e84524">
+
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movie"/>
+	</field>
+	<field name="genre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="genre"/>
+		<property name="com.jaspersoft.studio.field.label" value="genre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movie"/>
+	</field>
+	<field name="rating" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="rating"/>
+		<property name="com.jaspersoft.studio.field.label" value="rating"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movie"/>
+	</field>
+	<field name="title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="title"/>
+		<property name="com.jaspersoft.studio.field.label" value="title"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movie"/>
+	</field>
+	<field name="year" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="year"/>
+		<property name="com.jaspersoft.studio.field.label" value="year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="movie"/>
+	</field>
+	<background>
+		<band height="98" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="17" width="206" height="50" uuid="a626f114-7ce7-4476-9108-fc1c9d63a6f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE FILMES AVALIADOS]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="60" width="129" height="19" uuid="0c71c3a5-f1ee-4d1d-8e12-ca0af4758325"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Emitido em:" + new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="10" y="-5" width="93" height="95" uuid="c71f979e-0123-4def-a319-19220b8d03dd"/>
+				<imageExpression><![CDATA["C:/Users/pablo/Área de Trabalho/moviememo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="50" height="19" uuid="d972d646-8fc7-4a38-ae32-251f15e33aa9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5257d239-0dd9-4f80-bf8a-9c322a5c0073"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="10" width="120" height="18" uuid="385df28d-e3ac-4abf-8f8a-7643176119c9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="401e18f0-1a98-4538-bcb2-608b18b61a99"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="10" width="100" height="18" uuid="39572ffd-9249-4869-bd6a-3a68a110502b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77aff8d4-7ce5-41fc-82d6-eec1ccee3667"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="10" width="159" height="18" uuid="7456b8ff-adf7-4070-a29c-e991a0b0213c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9560ac65-4ac4-4643-bdfb-8f7254aab656"/>
+				</reportElement>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TITULO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="339" y="10" width="63" height="18" uuid="498bf4dc-a8fd-432c-943b-3ca8d54c2624">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="198b3e16-55a6-4a21-81ec-b048b652a15c"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="28" width="561" height="1" uuid="b7c2c934-f2f5-4d0e-b4cf-9a2a06151d7b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-1" width="561" height="1" uuid="0f730889-b46d-4eea-917b-4e62a366f7b5"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="6" width="48" height="18" uuid="11f170de-ed04-40f7-b16e-a14d6d8fdf95">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5257d239-0dd9-4f80-bf8a-9c322a5c0073"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="6" width="118" height="18" uuid="694ae9db-1c82-4f77-af47-6754c4f00c4d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="401e18f0-1a98-4538-bcb2-608b18b61a99"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{genre}.substring(0, 1).toUpperCase() + $F{genre}.substring(1)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="6" width="30" height="18" uuid="7e1cbcc5-b8bb-4257-814d-a47ccada2ada">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77aff8d4-7ce5-41fc-82d6-eec1ccee3667"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rating}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="6" width="159" height="18" uuid="178c1762-5fd3-418e-b246-970be1f697c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9560ac65-4ac4-4643-bdfb-8f7254aab656"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="6" width="48" height="18" uuid="4519d1c0-58b4-4baf-b41a-a1e957a0a850">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="198b3e16-55a6-4a21-81ec-b048b652a15c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="53" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="561" height="1" uuid="ff209256-6422-43b3-9452-d5d6df215b15"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="6" width="190" height="18" uuid="ddcf9b44-48c5-4ba3-b2c6-bb4a939fdc82"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUANTIDADE DE FILMES AVALIADOS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="6" width="74" height="18" uuid="caf4c338-50c8-4fd1-844a-fcd388da52a4"/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
